@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Adwaita
+Comment=Old Adwaita GTK theme (built on Azurra)
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Adwaita
+MetacityTheme=Adwaita
+IconTheme=Adwaita
+CursorTheme=DMZ-White
+ButtonLayout=:minimize,maximize,close
