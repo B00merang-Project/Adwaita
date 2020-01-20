@@ -3,7 +3,7 @@
 # Adwaita
 This theme reproduces the appearance of GNOME's default theme, Adwaita, before the revamp initiated in 2019. We felt that integrating Adwaita into the framework added some new possibilities and brought some new methods of drawing widgets.
 
-![adwaita-3.24](https://github.com/B00merang-Project/gallery/raw/master/Android%209%20Pie%20(4).png)
+![adwaita-3.24](https://raw.githubusercontent.com/B00merang-Project/gallery/master/Solaris%2011.4%20(1).png)
 
 **Maintainer:** [Elbullazul](https://github.com/elbullazul)
 
