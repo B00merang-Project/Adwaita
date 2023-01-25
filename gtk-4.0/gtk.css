@@ -17,7 +17,7 @@ dnd {
 image:disabled {
   -gtk-icon-filter: opacity(0.5); }
 
-image, image:disabled, label, label:disabled, box, box:disabled {
+image, label, box {
   background-color: transparent; }
 
 .view {
@@ -1234,7 +1234,14 @@ headerbar {
       -gtk-icon-shadow: none; }
   headerbar.titlebar, .titlebar headerbar {
     border-radius: 5px 5px 0px 0px; }
-  headerbar .titlebutton.close, headerbar .titlebutton.maximize, headerbar .titlebutton.minimize, headerbar .titlebutton:not(separator) {
+
+windowcontrols {
+  border-spacing: 6px; }
+  windowcontrols.start:not(.empty):dir(ltr), windowcontrols.end:not(.empty):dir(rtl) {
+    margin-right: 7px; }
+  windowcontrols.start:not(.empty):dir(rtl), windowcontrols.end:not(.empty):dir(ltr) {
+    margin-left: 7px; }
+  windowcontrols button.close, windowcontrols button.maximize, windowcontrols button.minimize {
     border-color: transparent;
     border-radius: 3px;
     color: #2E3436;
@@ -1243,7 +1250,7 @@ headerbar {
     box-shadow: none;
     text-shadow: none;
     -gtk-icon-shadow: none; }
-    headerbar .titlebutton.close:hover, headerbar .titlebutton.maximize:hover, headerbar .titlebutton.minimize:hover, headerbar .titlebutton:not(separator):hover {
+    windowcontrols button.close:hover, windowcontrols button.maximize:hover, windowcontrols button.minimize:hover {
       color: #2E3436;
       border-color: #babab8;
       border-bottom-color: #8c8c89;
@@ -1252,21 +1259,21 @@ headerbar {
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025);
       text-shadow: 0 1px white;
       -gtk-icon-shadow: 0 1px white; }
-    headerbar .titlebutton.close:active, headerbar .titlebutton.close:checked, headerbar .titlebutton.maximize:active, headerbar .titlebutton.maximize:checked, headerbar .titlebutton.minimize:active, headerbar .titlebutton.minimize:checked, headerbar .titlebutton:not(separator):active, headerbar .titlebutton:not(separator):checked {
+    windowcontrols button.close:active, windowcontrols button.close:checked, windowcontrols button.maximize:active, windowcontrols button.maximize:checked, windowcontrols button.minimize:active, windowcontrols button.minimize:checked {
       border-color: #babab8;
       background-color: #d1d1cf;
       background-image: none;
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-      headerbar .titlebutton.close:active:backdrop, headerbar .titlebutton.close:checked:backdrop, headerbar .titlebutton.maximize:active:backdrop, headerbar .titlebutton.maximize:checked:backdrop, headerbar .titlebutton.minimize:active:backdrop, headerbar .titlebutton.minimize:checked:backdrop, headerbar .titlebutton:not(separator):active:backdrop, headerbar .titlebutton:not(separator):checked:backdrop {
+      windowcontrols button.close:active:backdrop, windowcontrols button.close:checked:backdrop, windowcontrols button.maximize:active:backdrop, windowcontrols button.maximize:checked:backdrop, windowcontrols button.minimize:active:backdrop, windowcontrols button.minimize:checked:backdrop {
         border-color: #c6c6c4;
         background-color: #dddddb;
         background-image: none;
         box-shadow: none;
         text-shadow: none;
         -gtk-icon-shadow: none; }
-    headerbar .titlebutton.close:disabled, headerbar .titlebutton.maximize:disabled, headerbar .titlebutton.minimize:disabled, headerbar .titlebutton:not(separator):disabled {
+    windowcontrols button.close:disabled, windowcontrols button.maximize:disabled, windowcontrols button.minimize:disabled {
       border-color: transparent;
       color: #81817e;
       background-color: transparent;
@@ -1274,7 +1281,7 @@ headerbar {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-      headerbar .titlebutton.close:disabled:backdrop, headerbar .titlebutton.maximize:disabled:backdrop, headerbar .titlebutton.minimize:disabled:backdrop, headerbar .titlebutton:not(separator):disabled:backdrop {
+      windowcontrols button.close:disabled:backdrop, windowcontrols button.maximize:disabled:backdrop, windowcontrols button.minimize:disabled:backdrop {
         border-color: transparent;
         color: #babbbb;
         background-color: transparent;
@@ -1282,7 +1289,7 @@ headerbar {
         box-shadow: none;
         text-shadow: none;
         -gtk-icon-shadow: none; }
-    headerbar .titlebutton.close:backdrop, headerbar .titlebutton.maximize:backdrop, headerbar .titlebutton.minimize:backdrop, headerbar .titlebutton:not(separator):backdrop {
+    windowcontrols button.close:backdrop, windowcontrols button.maximize:backdrop, windowcontrols button.minimize:backdrop {
       border-color: transparent;
       color: #8b8e8f;
       background-color: transparent;
@@ -2178,7 +2185,7 @@ actionbar {
     padding: 0 12px; }
 
 scrolledwindow > overshoot.top {
-  background-image: radial-gradient(farthest-side at top, black, transparent);
+  background-image: radial-gradient(farthest-side at top, rgba(0, 0, 0, 0.5), transparent);
   background-size: 100% 50%;
   background-repeat: no-repeat;
   background-position: top;
@@ -2187,7 +2194,7 @@ scrolledwindow > overshoot.top {
   box-shadow: none; }
 
 scrolledwindow > overshoot.bottom {
-  background-image: radial-gradient(farthest-side at bottom, black, transparent);
+  background-image: radial-gradient(farthest-side at bottom, rgba(0, 0, 0, 0.5), transparent);
   background-size: 100% 50%;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -2196,7 +2203,7 @@ scrolledwindow > overshoot.bottom {
   box-shadow: none; }
 
 scrolledwindow > overshoot.left {
-  background-image: radial-gradient(farthest-side at left, black, transparent);
+  background-image: radial-gradient(farthest-side at left, rgba(0, 0, 0, 0.5), transparent);
   background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: left;
@@ -2205,7 +2212,7 @@ scrolledwindow > overshoot.left {
   box-shadow: none; }
 
 scrolledwindow > overshoot.right {
-  background-image: radial-gradient(farthest-side at right, black, transparent);
+  background-image: radial-gradient(farthest-side at right, rgba(0, 0, 0, 0.5), transparent);
   background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: right;
@@ -2908,11 +2915,9 @@ popover.entry-completion > contents {
   padding: 0; }
 
 statusbar {
-  color: #2E3436; }
+  padding: 4px 6px 4px 6px; }
   statusbar:backdrop {
     color: #8b8e8f; }
-  statusbar frame > border {
-    border: none; }
 
 menubutton > button > box {
   border-spacing: 6px; }
@@ -2961,15 +2966,6 @@ menubutton arrow {
 .terminal-screen, terminal-window, vte-terminal {
   background-color: #FFFFFF;
   color: #2E3436; }
-
-terminal-screen-container, terminal-screen-container:backdrop, terminal-screen-container scrollbar:not(slider), terminal-screen-container scrollbar:not(slider):backdrop {
-  border-color: transparent;
-  background-color: transparent; }
-
-terminal-screen-container scrollbar slider, terminal-screen-container scrollbar slider:backdrop {
-  background-color: #585d5e; }
-  terminal-screen-container scrollbar slider:hover, terminal-screen-container scrollbar slider:hover:active, terminal-screen-container scrollbar slider:backdrop:hover, terminal-screen-container scrollbar slider:backdrop:hover:active {
-    background-color: #383e40; }
 
 .linked button, .linked .raised button, .primary-toolbar .linked button, .primary-toolbar .linked .raised button {
   border-radius: 0;
