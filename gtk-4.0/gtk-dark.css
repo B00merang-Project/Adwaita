@@ -84,7 +84,8 @@ label > selection {
   color: #2B2E30;
   background-color: #4A90D9; }
   label > selection:focus-within {
-    color: #4A90D9; }
+    color: #FFFFFF;
+    background-color: #4A90D9; }
 
 label:disabled {
   color: #8c8c8c; }
@@ -1492,20 +1493,19 @@ menubar, .menubar {
     color: #959798;
     box-shadow: inset 0 -1px #232526;
     background-color: #2B2E30; }
-
-menubar > menuitem, .menubar > menuitem {
-  min-height: 16px;
-  padding: 4px 8px;
-  border: none;
-  color: #FFFFFF;
-  background-color: transparent; }
-  menubar > menuitem:hover, .menubar > menuitem:hover {
-    color: #4A90D9;
-    box-shadow: inset 0 -3px #4A90D9; }
-  menubar > menuitem:disabled, .menubar > menuitem:disabled {
-    color: #8c8c8c; }
-  menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
-    color: #959798; }
+  menubar > menuitem, .menubar > menuitem {
+    min-height: 16px;
+    padding: 4px 8px;
+    border: none;
+    color: #FFFFFF;
+    background-color: transparent; }
+    menubar > menuitem:hover, .menubar > menuitem:hover {
+      color: #4A90D9;
+      box-shadow: inset 0 -3px #4A90D9; }
+    menubar > menuitem:disabled, .menubar > menuitem:disabled {
+      color: #8c8c8c; }
+    menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
+      color: #959798; }
 
 notebook {
   padding: 0; }
@@ -2164,8 +2164,7 @@ window.dialog.print drawing {
 window.dialog.print .dialog-action-box {
   margin: 12px; }
 
-frame,
-.frame {
+frame, .frame {
   border: 1px solid #232526; }
 
 frame {
