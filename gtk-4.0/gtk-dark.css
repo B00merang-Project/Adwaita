@@ -3,7 +3,7 @@
   background-color: rgba(43, 46, 48, 0.999); }
   .background:backdrop {
     color: #959798;
-    background-color: #2B2E30; }
+    background-color: rgba(43, 46, 48, 0.999); }
 
 dnd {
   color: #FFFFFF; }
@@ -991,6 +991,37 @@ button.suggested-action {
     text-shadow: none;
     -gtk-icon-shadow: none; }
 
+modelbutton.flat {
+  min-height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: none;
+  border-radius: 0px;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+  modelbutton.flat:hover {
+    color: #FFFFFF;
+    background-color: #4A90D9; }
+  modelbutton.flat:selected {
+    color: #FFFFFF;
+    background-color: #4A90D9; }
+  modelbutton.flat:disabled {
+    color: #8c8c8c; }
+  modelbutton.flat > image {
+    padding-right: 4px; }
+  modelbutton.flat arrow {
+    background: none;
+    min-width: 16px;
+    min-height: 16px;
+    opacity: 0.3; }
+    modelbutton.flat arrow:hover {
+      background: none; }
+    modelbutton.flat arrow.left {
+      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
+    modelbutton.flat arrow.right {
+      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
+
 button.link,
 link {
   color: #4A90D9;
@@ -1491,6 +1522,8 @@ popover.background {
   .csd popover.background, popover.background {
     border: 1px solid #232526;
     border-radius: 7px; }
+    .csd popover.background:backdrop, popover.background:backdrop {
+      border-color: #252728; }
   popover.background:backdrop {
     background-color: #2B2E30;
     box-shadow: none; }
@@ -1504,37 +1537,6 @@ popover.background {
 
 magnifier {
   background-color: #3D4244; }
-
-modelbutton.flat {
-  min-height: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border: none;
-  border-radius: 0px;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none; }
-  modelbutton.flat:hover {
-    color: #FFFFFF;
-    background-color: #4A90D9; }
-  modelbutton.flat:selected {
-    color: #FFFFFF;
-    background-color: #4A90D9; }
-  modelbutton.flat:disabled {
-    color: #8c8c8c; }
-  modelbutton.flat > image {
-    padding-right: 4px; }
-  modelbutton.flat arrow {
-    background: none;
-    min-width: 16px;
-    min-height: 16px;
-    opacity: 0.3; }
-    modelbutton.flat arrow:hover {
-      background: none; }
-    modelbutton.flat arrow.left {
-      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
-    modelbutton.flat arrow.right {
-      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
 
 menu, .menu {
   margin: 4px;
@@ -2385,6 +2387,20 @@ list {
         background-color: #4A90D9; }
   list separator {
     background-color: #373b3d; }
+
+columnview > listview > row {
+  padding: 0; }
+  columnview > listview > row > cell {
+    padding: 8px 6px; }
+    columnview > listview > row > cell:not(:first-child) {
+      border-left: 1px solid transparent; }
+
+columnview.column-separators > listview > row > cell {
+  border-left-color: #232526; }
+
+columnview.data-table > listview > row > cell {
+  padding-top: 2px;
+  padding-bottom: 2px; }
 
 treeexpander {
   border-spacing: 4px; }
