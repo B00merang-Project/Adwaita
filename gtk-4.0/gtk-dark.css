@@ -2360,33 +2360,29 @@ separator {
   combobox separator {
     border: none; }
 
-list {
+listview row:hover {
+  background-color: #404345; }
+
+listview row:active {
+  background-color: #555859; }
+
+listview row:backdrop {
+  color: #959798; }
+
+listview row:selected {
+  border: none;
   color: #FFFFFF;
-  background-color: #3D4244; }
-  list row {
-    padding: 2px; }
-    list row:hover {
-      background-color: #404345; }
-    list row:active {
-      background-color: #555859; }
-    list row:backdrop {
-      color: #959798; }
-    list row:selected {
-      border: none;
-      color: #FFFFFF;
-      background-color: #4A90D9; }
-      list row:selected:hover {
-        background-color: #5397df; }
-      list row:selected:active {
-        background-color: #3a81cc; }
-      list row:selected:disabled {
-        color: rgba(255, 255, 255, 0.7);
-        background-color: #4A90D9; }
-      list row:selected:backdrop {
-        color: #2B2E30;
-        background-color: #4A90D9; }
-  list separator {
-    background-color: #373b3d; }
+  background-color: #4A90D9; }
+  listview row:selected:hover {
+    background-color: #5397df; }
+  listview row:selected:active {
+    background-color: #3a81cc; }
+  listview row:selected:disabled {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #4A90D9; }
+  listview row:selected:backdrop {
+    color: #2B2E30;
+    background-color: #4A90D9; }
 
 columnview > listview > row {
   padding: 0; }
@@ -2523,160 +2519,43 @@ messagedialog.csd .dialog-action-area button {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px; }
 
-filechooser placessidebar list, .nautilus-window placessidebar list, .nemo-window placessidebar list {
+.sidebar {
   background-color: #3D4244; }
-
-filechooser .sidebar, .nautilus-window .sidebar, .nemo-window .sidebar {
-  background-color: #3D4244; }
-  filechooser .sidebar .view:not(:selected), filechooser .sidebar iconview, .nautilus-window .sidebar .view:not(:selected), .nautilus-window .sidebar iconview, .nemo-window .sidebar .view:not(:selected), .nemo-window .sidebar iconview {
-    border: none;
-    color: #FFFFFF;
+  .sidebar:not(separator):dir(ltr), .sidebar.left:not(separator), .sidebar.left:not(separator):dir(rtl) {
+    border-right: 1px solid #232526;
+    border-left-style: none; }
+  .sidebar:not(separator):dir(rtl), .sidebar.right:not(separator) {
+    border-left: 1px solid #232526;
+    border-right-style: none; }
+  .sidebar listview.view,
+  .sidebar list {
     background-color: transparent; }
-  filechooser .sidebar frame > border, filechooser .sidebar .frame, .nautilus-window .sidebar frame > border, .nautilus-window .sidebar .frame, .nemo-window .sidebar frame > border, .nemo-window .sidebar .frame {
-    border: none; }
-  filechooser .sidebar row:not(:selected), filechooser .sidebar view row:not(:selected), filechooser .sidebar row.sidebar-row:not(:selected), .nautilus-window .sidebar row:not(:selected), .nautilus-window .sidebar view row:not(:selected), .nautilus-window .sidebar row.sidebar-row:not(:selected), .nemo-window .sidebar row:not(:selected), .nemo-window .sidebar view row:not(:selected), .nemo-window .sidebar row.sidebar-row:not(:selected) {
-    color: #FFFFFF; }
-    filechooser .sidebar row:not(:selected):backdrop, filechooser .sidebar view row:not(:selected):backdrop, filechooser .sidebar row.sidebar-row:not(:selected):backdrop, .nautilus-window .sidebar row:not(:selected):backdrop, .nautilus-window .sidebar view row:not(:selected):backdrop, .nautilus-window .sidebar row.sidebar-row:not(:selected):backdrop, .nemo-window .sidebar row:not(:selected):backdrop, .nemo-window .sidebar view row:not(:selected):backdrop, .nemo-window .sidebar row.sidebar-row:not(:selected):backdrop {
-      color: #959798; }
-  filechooser .sidebar .expander, .nautilus-window .sidebar .expander, .nemo-window .sidebar .expander {
-    color: #FFFFFF; }
-    filechooser .sidebar .expander:hover, .nautilus-window .sidebar .expander:hover, .nemo-window .sidebar .expander:hover {
-      color: #4A90D9; }
+  paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
+    border-style: none; }
 
-.caja-navigation-window .caja-side-pane {
-  background-color: #3D4244; }
-  .caja-navigation-window .caja-side-pane .view:not(:selected), .caja-navigation-window .caja-side-pane iconview {
-    border: none;
-    color: #FFFFFF;
-    background-color: transparent; }
-  .caja-navigation-window .caja-side-pane frame > border, .caja-navigation-window .caja-side-pane .frame {
-    border: none; }
-  .caja-navigation-window .caja-side-pane row:not(:selected), .caja-navigation-window .caja-side-pane view row:not(:selected), .caja-navigation-window .caja-side-pane row.sidebar-row:not(:selected) {
-    color: #FFFFFF; }
-    .caja-navigation-window .caja-side-pane row:not(:selected):backdrop, .caja-navigation-window .caja-side-pane view row:not(:selected):backdrop, .caja-navigation-window .caja-side-pane row.sidebar-row:not(:selected):backdrop {
-      color: #959798; }
-  .caja-navigation-window .caja-side-pane .expander {
-    color: #FFFFFF; }
-    .caja-navigation-window .caja-side-pane .expander:hover {
-      color: #4A90D9; }
-
-stacksidebar list {
-  background-color: transparent; }
-  stacksidebar list separator {
-    background-color: #232526; }
-    stacksidebar list separator:backdrop {
-      background-color: #252728; }
-
-stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list {
-  border-right: 1px solid #232526;
-  border-left-style: none; }
-
-stacksidebar.sidebar:dir(rtl) list, stacksidebar.sidebar.right list {
-  border-left: 1px solid #232526;
-  border-right-style: none; }
+stacksidebar list.separators:not(.horizontal) > row:not(.separator) {
+  border-bottom: none; }
 
 stacksidebar row {
-  padding: 10px 4px; }
+  padding: 10px 4px;
+  color: #FFFFFF; }
   stacksidebar row > label {
     padding-left: 6px;
     padding-right: 6px; }
   stacksidebar row.needs-attention > label {
     background-size: 6px 6px, 0 0; }
-
-placessidebar > viewport.frame {
-  border-style: none; }
-
-placessidebar row {
-  min-height: 36px;
-  padding: 0px; }
-  placessidebar row > revealer {
-    padding: 0 14px; }
-  placessidebar row image.sidebar-icon {
-    opacity: 1; }
-    placessidebar row image.sidebar-icon:dir(ltr) {
-      padding-right: 8px; }
-    placessidebar row image.sidebar-icon:dir(rtl) {
-      padding-left: 8px; }
-  placessidebar row label.sidebar-label:dir(ltr) {
-    padding-right: 2px; }
-  placessidebar row label.sidebar-label:dir(rtl) {
-    padding-left: 2px; }
-  placessidebar row.sidebar-new-bookmark-row {
-    color: #4A90D9; }
-  placessidebar row:drop(active):not(:disabled) {
-    color: #339d63;
-    box-shadow: inset 0 1px #339d63, inset 0 -1px #339d63; }
-    placessidebar row:drop(active):not(:disabled):selected {
-      color: #FFFFFF;
-      background-color: #339d63; }
-
-button.sidebar-button {
-  border-color: transparent;
-  border-radius: 3px;
-  color: #FFFFFF;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  -gtk-icon-shadow: none;
-  min-width: 22px;
-  min-height: 22px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  padding: 0;
-  border-radius: 100%;
-  color: #FFFFFF; }
-  button.sidebar-button:hover {
+  stacksidebar row:selected {
     color: #FFFFFF;
-    border-color: #232526;
-    border-bottom-color: #1a1b1c;
-    background-color: #2B2E30;
-    background-image: linear-gradient(to bottom, #2e3134, #292b2d);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.15), inset 0 -1px rgba(0, 0, 0, 0.5);
-    text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black; }
-  button.sidebar-button:active, button.sidebar-button:checked {
-    border-color: #232526;
-    background-color: #27292b;
-    background-image: none;
-    box-shadow: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none; }
-    button.sidebar-button:active:backdrop, button.sidebar-button:checked:backdrop {
-      border-color: #252728;
-      background-color: #292c2d;
-      background-image: none;
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none; }
-  button.sidebar-button:disabled {
-    border-color: transparent;
-    color: #8c8c8c;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none; }
-    button.sidebar-button:disabled:backdrop {
-      border-color: transparent;
-      color: #cacbcb;
-      background-color: transparent;
-      background-image: none;
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none; }
-  button.sidebar-button:backdrop {
-    border-color: transparent;
-    color: #959798;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none; }
-  button.sidebar-button:hover, button.sidebar-button:active {
-    color: #FFFFFF; }
-  button.sidebar-button:not(:hover):not(:active) > image {
-    opacity: 0.5; }
+    background-color: #4A90D9;
+    border-radius: 3px; }
+  stacksidebar row:selected:hover:dir(ltr), stacksidebar row:selected:hover:dir(rtl) {
+    color: #FFFFFF;
+    background-color: #5c9fe4; }
+  stacksidebar row.activatable:active, stacksidebar row.activatable:selected:active {
+    box-shadow: none; }
+
+separator.sidebar {
+  background-color: #232526; }
 
 paned > separator {
   min-width: 1px;
@@ -2730,8 +2609,9 @@ video {
     border-radius: 32px; }
 
 tooltip.background {
-  border: 1px solid #232526;
+  border: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 3px;
+  color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 4px;
   box-shadow: none; }
