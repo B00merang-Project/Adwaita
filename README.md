@@ -8,7 +8,7 @@ This theme reproduces the appearance of GNOME's default theme, Adwaita, before t
 
 ### Supported platforms
 - Any GTK-based desktop
-- No shell-scpecitifc theme (yet)
+- Gnome
 
 ### Manual installation
 Go to releases, download the latest `.zip` file and extract it to the themes directory i.e. `/home/USERNAME/.themes`
