@@ -108,9 +108,9 @@ label:disabled {
   color: #8c8c8c; }
   button label:disabled {
     color: inherit; }
-  > selection label:disabled {
+  label:disabled > selection {
     color: #6b8eb3; }
-    > selection label:disabled:backdrop {
+    label:disabled > selection:backdrop {
       color: #8aadd2; }
 
 label.error {
@@ -2778,37 +2778,46 @@ combobox:drop(active) button.combo {
   box-shadow: inset 0 0 0 1px #4A90D9;
   caret-color: #4A90D9; }
 
-decoration {
-  border-radius: 5px 5px 0 0;
+window {
   border-width: 0px;
-  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.25);
-  margin: 10px; }
-  decoration:backdrop {
-    box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.15); }
-  .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
-    border-radius: 0; }
-  .popup decoration {
-    box-shadow: none; }
-  .csd.popup decoration {
-    border-radius: 0px;
-    box-shadow: -1px 1px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.2); }
-  tooltip.csd decoration {
-    border-radius: 5px;
-    box-shadow: none; }
-  messagedialog.csd decoration {
-    border-radius: 5px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.25); }
-  .ssd decoration {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25); }
-  .solid-csd decoration {
+  padding: 0; }
+  window.csd {
+    box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.25);
+    margin: 0px;
+    border-radius: 5px 5px 0 0; }
+    window.csd:backdrop {
+      box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.15);
+      transition: 200ms ease-out; }
+    window.csd.popup {
+      border-radius: 0px;
+      box-shadow: -1px 1px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.2); }
+    window.csd.dialog.message {
+      border-radius: 5px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.35); }
+  window.solid-csd {
     margin: 0;
     padding: 4px;
-    background-color: #232526;
     border: solid 1px #232526;
     border-radius: 0;
-    box-shadow: inset 0 0 0 3px #2B2E30, inset 0 1px white; }
-    .solid-csd decoration:backdrop {
-      box-shadow: inset 0 0 0 3px #2B2E30, inset 0 1px white; }
+    box-shadow: inset 0 0 0 4px #232526, inset 0 0 0 3px #2B2E30; }
+    window.solid-csd:backdrop {
+      box-shadow: inset 0 0 0 4px #232526, inset 0 0 0 3px #2B2E30; }
+  window.maximized, window.fullscreen {
+    border-radius: 0;
+    box-shadow: none; }
+  window.tiled, window.tiled-top, window.tiled-left, window.tiled-right, window.tiled-bottom {
+    border-radius: 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35), 0 0 0 20px transparent; }
+    window.tiled:backdrop, window.tiled-top:backdrop, window.tiled-left:backdrop, window.tiled-right:backdrop, window.tiled-bottom:backdrop {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 0 20px transparent; }
+  window.popup {
+    box-shadow: none; }
+  window.ssd {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4); }
+
+tooltip.csd {
+  border-radius: 3px;
+  box-shadow: none; }
 
 shortcuts-section {
   margin: 20px; }
