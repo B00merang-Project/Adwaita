@@ -963,12 +963,6 @@ button.suggested-action {
     border-color: #4787c9;
     background-color: #4787c9;
     background-image: none; }
-    button.suggested-action:active:backdrop, button.suggested-action:checked:backdrop {
-      border-color: #5190d2;
-      background-color: #5190d2;
-      background-image: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none; }
   button.suggested-action:disabled {
     border-color: #6ca4de;
     color: #e6e6e5;
@@ -2494,35 +2488,36 @@ calendar {
     color: #2E3436;
     border-color: #c6c6c4; }
 
-messagedialog .titlebar {
+window.dialog.message .titlebar {
   min-height: 20px;
-  border: none;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
   background-image: none;
   background-color: #E8E8E7;
-  box-shadow: none; }
+  border-style: none;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px; }
 
-messagedialog.csd.background {
+window.dialog.message box.dialog-vbox.vertical {
+  border-spacing: 10px; }
+
+window.dialog.message label.title {
+  font-weight: 800;
+  font-size: 15pt; }
+
+window.dialog.message.csd.background {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px; }
 
-messagedialog.csd .dialog-action-area button {
-  padding: 10px;
+window.dialog.message.csd .dialog-action-area button {
+  padding: 10px 14px;
   border-radius: 0;
+  border-left-style: solid;
+  border-right-style: none;
   border-bottom-style: none;
   background-image: none; }
-  messagedialog.csd .dialog-action-area button:last-child {
-    border-right-width: 0;
-    border-radius: 0px;
-    border-bottom-right-radius: 5px; }
-  messagedialog.csd .dialog-action-area button:first-child {
-    border-left-width: 0;
-    border-radius: 0px;
+  window.dialog.message.csd .dialog-action-area button:first-child {
+    border-left-style: none;
     border-bottom-left-radius: 5px; }
-  messagedialog.csd .dialog-action-area button:only-child {
-    border-radius: 0px;
-    border-bottom-left-radius: 5px;
+  window.dialog.message.csd .dialog-action-area button:last-child {
     border-bottom-right-radius: 5px; }
 
 .sidebar {
