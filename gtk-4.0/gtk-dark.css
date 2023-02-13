@@ -50,13 +50,13 @@ textview > text {
       background-color: #4A90D9; }
 
 textview:drop(active) {
-  caret-color: #4A90D9; }
+  caret-color: #26a269; }
 
 iconview:drop(active) {
   box-shadow: none; }
 
 iconview > dndtarget:drop(active) {
-  border: 1px solid #4A90D9; }
+  border: 1px solid #26a269; }
 
 rubberband {
   border: 1px solid #3a81cc;
@@ -786,8 +786,8 @@ entry {
     background-image: none;
     border-color: transparent; }
   entry:drop(active):focus, entry:drop(active) {
-    border-color: #339d63;
-    box-shadow: inset 0 0 0 1px #339d63; }
+    border-color: #26a269;
+    box-shadow: inset 0 0 0 1px #26a269; }
 
 editablelabel > stack > text > selection {
   color: transparent;
@@ -840,9 +840,9 @@ button {
         text-shadow: none;
         -gtk-icon-shadow: none; }
   button:drop(active) {
-    color: #339d63;
-    border-color: #339d63;
-    box-shadow: inset 0 0 0 1px #339d63; }
+    color: #26a269;
+    border-color: #26a269;
+    box-shadow: inset 0 0 0 1px #26a269; }
   button:disabled {
     color: #8c8c8c;
     border-color: #232526;
@@ -1245,9 +1245,9 @@ infobar {
             text-shadow: none;
             -gtk-icon-shadow: none; }
       infobar.info button:drop(active), infobar.question button:drop(active), infobar.warning button:drop(active), infobar.error button:drop(active) {
-        color: #339d63;
-        border-color: #339d63;
-        box-shadow: inset 0 0 0 1px #339d63; }
+        color: #26a269;
+        border-color: #26a269;
+        box-shadow: inset 0 0 0 1px #26a269; }
       infobar.info button:disabled, infobar.question button:disabled, infobar.warning button:disabled, infobar.error button:disabled {
         color: #8c8c8c;
         border-color: #232526;
@@ -1346,9 +1346,9 @@ headerbar {
           text-shadow: none;
           -gtk-icon-shadow: none; }
     headerbar button:drop(active) {
-      color: #339d63;
-      border-color: #339d63;
-      box-shadow: inset 0 0 0 1px #339d63; }
+      color: #26a269;
+      border-color: #26a269;
+      box-shadow: inset 0 0 0 1px #26a269; }
     headerbar button:disabled {
       color: #8c8c8c;
       border-color: #232526;
@@ -1457,57 +1457,118 @@ pathbar > button.slider-button {
   padding-left: 0;
   padding-right: 0; }
 
-treeview.view {
-  border-bottom: 1px solid rgba(35, 37, 38, 0.5); }
-  treeview.view:backdrop {
-    border-color: rgba(37, 39, 40, 0.5); }
-  treeview.view:selected, treeview.view:selected:focus {
-    border-radius: 0;
+columnview.view, treeview.view {
+  border-left-color: #282b2c;
+  border-top-color: #282b2c; }
+  columnview.view > rubberband, treeview.view > rubberband {
+    border: 1px solid #3a81cc;
+    background-color: rgba(74, 144, 217, 0.3); }
+  columnview.view:selected, columnview.view:selected:focus, treeview.view:selected, treeview.view:selected:focus {
     color: #FFFFFF;
-    background-color: #4A90D9; }
-    treeview.view:selected:backdrop, treeview.view:selected:focus:backdrop {
+    background-color: #4A90D9;
+    border-radius: 0; }
+    columnview.view:selected:backdrop, columnview.view:selected:focus:backdrop, treeview.view:selected:backdrop, treeview.view:selected:focus:backdrop {
       color: #2B2E30;
       background-color: #4A90D9; }
-  treeview.view:drop(active) {
+  columnview.view:disabled, treeview.view:disabled {
+    color: #8c8c8c; }
+    columnview.view:disabled:backdrop, treeview.view:disabled:backdrop {
+      color: #cacbcb; }
+    columnview.view:disabled:selected, treeview.view:disabled:selected {
+      color: #6b8eb3; }
+      columnview.view:disabled:selected:backdrop, treeview.view:disabled:selected:backdrop {
+        color: #8aadd2; }
+  columnview.view.separator, treeview.view.separator {
+    min-height: 2px;
+    color: #282b2c; }
+  columnview.view:backdrop, treeview.view:backdrop {
+    border-left-color: #2a2c2e;
+    border-top: #2a2c2e; }
+  columnview.view:drop(active), treeview.view:drop(active) {
+    box-shadow: none; }
+  columnview.view > dndtarget:drop(active), treeview.view > dndtarget:drop(active) {
     border-style: solid none;
     border-width: 1px;
-    border-color: #4A90D9; }
-    treeview.view.after:drop(active) {
+    border-color: #26a269; }
+    columnview.view > dndtarget.after:drop(active), treeview.view > dndtarget.after:drop(active) {
       border-top-style: none; }
-    treeview.view.before:drop(active) {
+    columnview.view > dndtarget.before:drop(active), treeview.view > dndtarget.before:drop(active) {
       border-bottom-style: none; }
-
-treeview header button {
-  border-radius: 0;
-  padding: 0 6px;
-  border-style: solid;
-  border-width: 0 1px 1px 0;
-  font-weight: bold;
-  color: #b1b3b4;
-  background-image: none;
-  background-color: #3D4244; }
-  treeview header button:backdrop {
-    border-color: #252728;
-    background-color: #404548; }
-  treeview header button:last-child {
-    border-width: 0 0 1px 0; }
-  treeview header button:hover, treeview header button:focus:hover {
-    color: #cfd0d0;
-    background-image: none;
-    background-color: #3D4244; }
-  treeview header button:active, treeview header button:focus:active {
+  columnview.view.expander, treeview.view.expander {
+    min-width: 16px;
+    min-height: 16px;
+    color: #c5c6c7;
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+    columnview.view.expander:hover, treeview.view.expander:hover {
+      color: #FFFFFF; }
+    columnview.view.expander:selected, treeview.view.expander:selected {
+      color: #c9def4; }
+      columnview.view.expander:selected:hover, treeview.view.expander:selected:hover {
+        color: #FFFFFF; }
+    columnview.view.expander:checked, treeview.view.expander:checked {
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+    columnview.view.expander:dir(rtl), treeview.view.expander:dir(rtl) {
+      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
+  columnview.view.progressbar, treeview.view.progressbar {
     color: #FFFFFF;
-    background-image: none; }
-  treeview header button:selected, treeview header button:focus:selected {
+    background-color: #4A90D9;
+    background-image: image(#4A90D9);
+    box-shadow: none; }
+    columnview.view.progressbar:selected:focus, columnview.view.progressbar:selected, treeview.view.progressbar:selected:focus, treeview.view.progressbar:selected {
+      color: #4A90D9;
+      background-image: image(#FFFFFF); }
+      columnview.view.progressbar:selected:focus:backdrop, columnview.view.progressbar:selected:backdrop, treeview.view.progressbar:selected:focus:backdrop, treeview.view.progressbar:selected:backdrop {
+        color: #4A90D9;
+        background-color: #2B2E30; }
+  columnview.view.trough, treeview.view.trough {
+    background-color: rgba(255, 255, 255, 0.9); }
+    columnview.view.trough:selected, columnview.view.trough:selected:focus, treeview.view.trough:selected, treeview.view.trough:selected:focus {
+      background-color: rgba(255, 255, 255, 0.3); }
+  columnview.view > header > button, treeview.view > header > button {
+    color: #9ea1a2;
+    background-color: #3D4244;
+    font-weight: bold;
+    text-shadow: none;
+    box-shadow: none; }
+    columnview.view > header > button:hover, treeview.view > header > button:hover {
+      color: #cfd0d1;
+      box-shadow: none;
+      transition: none; }
+    columnview.view > header > button:active, treeview.view > header > button:active {
+      color: #FFFFFF;
+      transition: none; }
+    columnview.view > header > button sort-indicator, treeview.view > header > button sort-indicator {
+      min-height: 16px;
+      min-width: 16px; }
+      columnview.view > header > button sort-indicator.ascending, treeview.view > header > button sort-indicator.ascending {
+        -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+      columnview.view > header > button sort-indicator.descending, treeview.view > header > button sort-indicator.descending {
+        -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+  columnview.view button.dnd:active, columnview.view button.dnd:selected, columnview.view button.dnd:hover, columnview.view button.dnd, columnview.view header.button.dnd:active, columnview.view header.button.dnd:selected, columnview.view header.button.dnd:hover, columnview.view header.button.dnd, treeview.view button.dnd:active, treeview.view button.dnd:selected, treeview.view button.dnd:hover, treeview.view button.dnd, treeview.view header.button.dnd:active, treeview.view header.button.dnd:selected, treeview.view header.button.dnd:hover, treeview.view header.button.dnd {
+    padding: 0 6px;
+    color: #FFFFFF;
+    background-image: none;
+    background-color: #4A90D9;
+    border-style: none;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 1px #FFFFFF;
+    text-shadow: none;
+    transition: none; }
+  columnview.view acceleditor > label, treeview.view acceleditor > label {
     background-color: #4A90D9; }
 
-treeview entry, treeview entry.flat {
-  border-radius: 0;
+columnview.view > header > button, treeview.view > header > button, columnview.view > header > button:hover, treeview.view > header > button:hover, columnview.view > header > button:active, treeview.view > header > button:active {
+  padding: 0 6px;
   background-image: none;
-  background-color: #3D4244;
-  transition-property: color, background; }
-  treeview entry:focus, treeview entry.flat:focus {
-    border-color: #4A90D9; }
+  border-style: none none solid solid;
+  border-color: #282b2c;
+  border-radius: 0;
+  text-shadow: none; }
+  columnview.view > header > button:disabled, treeview.view > header > button:disabled {
+    border-color: #2B2E30;
+    background-image: none; }
+  columnview.view > header > button:last-child, treeview.view > header > button:last-child {
+    border-right-style: none; }
 
 popover.background {
   background-color: transparent;
@@ -2662,11 +2723,11 @@ colorswatch.light > overlay {
 colorswatch:drop(active) {
   box-shadow: none; }
   colorswatch.light:drop(active) > overlay {
-    border-color: #4A90D9;
-    box-shadow: inset 0 0 0 2px #232526, inset 0 0 0 1px #4A90D9; }
+    border-color: #26a269;
+    box-shadow: inset 0 0 0 2px #232526, inset 0 0 0 1px #26a269; }
   colorswatch.dark:drop(active) > overlay {
-    border-color: #4A90D9;
-    box-shadow: inset 0 0 0 2px #232526, inset 0 0 0 1px #4A90D9; }
+    border-color: #26a269;
+    box-shadow: inset 0 0 0 2px #232526, inset 0 0 0 1px #26a269; }
 
 colorswatch > overlay {
   border: 1px solid rgba(0, 0, 0, 0.15); }
@@ -2771,13 +2832,14 @@ filechooserbutton:drop(active) {
 
 combobox:drop(active) button.combo {
   box-shadow: none;
-  color: #339d63;
-  border-color: #339d63; }
+  color: #26a269;
+  border-color: #26a269; }
 
-:not(decoration):not(window):drop(active), :not(decoration):not(window):drop(active):focus, combobox:drop(active) button.combo {
-  border-color: #4A90D9;
-  box-shadow: inset 0 0 0 1px #4A90D9;
-  caret-color: #4A90D9; }
+:not(decoration):not(window):drop(active),
+:not(decoration):not(window):drop(active):focus {
+  border-color: #26a269;
+  box-shadow: inset 0 0 0 1px #26a269;
+  caret-color: #26a269; }
 
 window {
   border-width: 0px;
