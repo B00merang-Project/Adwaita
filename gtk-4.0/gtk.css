@@ -1193,83 +1193,155 @@ searchbar {
 .nautilus-window .searchbar-container {
   margin-top: -1px; }
 
-infobar {
-  border: none; }
-  infobar.info, infobar.question, infobar.warning, infobar.error {
-    color: #FFFFFF;
+infobar > revealer > box {
+  padding: 8px;
+  border-spacing: 12px; }
+
+infobar.info > revealer > box, infobar.question > revealer > box, infobar.warning > revealer > box, infobar.error > revealer > box {
+  color: #FFFFFF;
+  background-color: #4A90D9; }
+  infobar.info > revealer > box:backdrop, infobar.question > revealer > box:backdrop, infobar.warning > revealer > box:backdrop, infobar.error > revealer > box:backdrop {
+    color: #E8E8E7;
     background-color: #4A90D9; }
-    infobar.info:backdrop, infobar.question:backdrop, infobar.warning:backdrop, infobar.error:backdrop {
-      color: #E8E8E7;
-      background-color: #4A90D9; }
-    infobar.info button, infobar.question button, infobar.warning button, infobar.error button {
-      padding: 5px 9px;
-      min-height: 24px;
-      min-width: 16px;
-      border-style: solid;
-      border-width: 1px;
-      border-radius: 3px;
-      color: #FFFFFF;
-      border-color: #3873b1;
-      border-bottom-color: #35577a;
-      background-color: #4A90D9;
-      background-image: linear-gradient(to bottom, #4c91da, #3d84cf);
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025);
-      text-shadow: 0 1px white;
-      -gtk-icon-shadow: 0 1px white; }
-      infobar.info button:hover, infobar.question button:hover, infobar.warning button:hover, infobar.error button:hover {
-        background-image: linear-gradient(to bottom, #579be2, #4188d2);
-        box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025); }
-      infobar.info button:active, infobar.info button:checked, infobar.question button:active, infobar.question button:checked, infobar.warning button:active, infobar.warning button:checked, infobar.error button:active, infobar.error button:checked {
-        border-color: #3873b1;
-        background-color: #3a81cc;
-        background-image: none;
+
+infobar button {
+  padding: 5px 9px;
+  min-height: 24px;
+  min-width: 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  color: #FFFFFF;
+  border-color: #3873b1;
+  border-bottom-color: #35577a;
+  background-color: #4A90D9;
+  background-image: linear-gradient(to bottom, #4c91da, #3d84cf);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025);
+  text-shadow: 0 1px white;
+  -gtk-icon-shadow: 0 1px white; }
+  infobar button:hover {
+    background-image: linear-gradient(to bottom, #579be2, #4188d2);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025); }
+  infobar button:active, infobar button:checked {
+    border-color: #3873b1;
+    background-color: #3a81cc;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none; }
+    infobar button:active:backdrop, infobar button:checked:backdrop {
+      border-color: #c6c6c4;
+      background-color: #d1d1cf;
+      box-shadow: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none; }
+    infobar button:active:disabled, infobar button:checked:disabled {
+      color: #81817e;
+      background-color: #dbdbda;
+      box-shadow: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none; }
+      infobar button:active:disabled:backdrop, infobar button:checked:disabled:backdrop {
+        color: #babbbb;
+        background-color: #dadad7;
         box-shadow: none;
         text-shadow: none;
         -gtk-icon-shadow: none; }
-        infobar.info button:active:backdrop, infobar.info button:checked:backdrop, infobar.question button:active:backdrop, infobar.question button:checked:backdrop, infobar.warning button:active:backdrop, infobar.warning button:checked:backdrop, infobar.error button:active:backdrop, infobar.error button:checked:backdrop {
-          border-color: #c6c6c4;
-          background-color: #d1d1cf;
-          box-shadow: none;
-          text-shadow: none;
-          -gtk-icon-shadow: none; }
-        infobar.info button:active:disabled, infobar.info button:checked:disabled, infobar.question button:active:disabled, infobar.question button:checked:disabled, infobar.warning button:active:disabled, infobar.warning button:checked:disabled, infobar.error button:active:disabled, infobar.error button:checked:disabled {
-          color: #81817e;
-          background-color: #dbdbda;
-          box-shadow: none;
-          text-shadow: none;
-          -gtk-icon-shadow: none; }
-          infobar.info button:active:disabled:backdrop, infobar.info button:checked:disabled:backdrop, infobar.question button:active:disabled:backdrop, infobar.question button:checked:disabled:backdrop, infobar.warning button:active:disabled:backdrop, infobar.warning button:checked:disabled:backdrop, infobar.error button:active:disabled:backdrop, infobar.error button:checked:disabled:backdrop {
-            color: #babbbb;
-            background-color: #dadad7;
-            box-shadow: none;
-            text-shadow: none;
-            -gtk-icon-shadow: none; }
-      infobar.info button:drop(active), infobar.question button:drop(active), infobar.warning button:drop(active), infobar.error button:drop(active) {
-        color: #2ec27e;
-        border-color: #2ec27e;
-        box-shadow: inset 0 0 0 1px #2ec27e; }
-      infobar.info button:disabled, infobar.question button:disabled, infobar.warning button:disabled, infobar.error button:disabled {
-        color: #81817e;
-        border-color: #babab8;
-        background-color: #f3f3f3;
-        background-image: none;
-        text-shadow: none;
-        -gtk-icon-shadow: none; }
-        infobar.info button:disabled:backdrop, infobar.question button:disabled:backdrop, infobar.warning button:disabled:backdrop, infobar.error button:disabled:backdrop {
-          color: #babbbb;
-          border-color: #c6c6c4;
-          background-color: #f1f1f0;
-          box-shadow: none;
-          text-shadow: none;
-          -gtk-icon-shadow: none; }
-      infobar.info button:backdrop, infobar.question button:backdrop, infobar.warning button:backdrop, infobar.error button:backdrop {
-        border-color: #c6c6c4;
-        color: #8b8e8f;
-        background-color: #E8E8E7;
-        background-image: none;
-        box-shadow: none;
-        text-shadow: none;
-        -gtk-icon-shadow: none; }
+  infobar button:drop(active) {
+    color: #2ec27e;
+    border-color: #2ec27e;
+    box-shadow: inset 0 0 0 1px #2ec27e; }
+  infobar button:disabled {
+    color: #81817e;
+    border-color: #babab8;
+    background-color: #f3f3f3;
+    background-image: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none; }
+    infobar button:disabled:backdrop {
+      color: #babbbb;
+      border-color: #c6c6c4;
+      background-color: #f1f1f0;
+      box-shadow: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none; }
+  infobar button:backdrop {
+    border-color: #c6c6c4;
+    color: #8b8e8f;
+    background-color: #E8E8E7;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none; }
+
+infobar .close,
+searchbar .close {
+  border-color: transparent;
+  border-radius: 3px;
+  color: #FFFFFF;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  min-width: 16px;
+  min-height: 16px;
+  padding: 4px; }
+  infobar .close:hover,
+  searchbar .close:hover {
+    color: #FFFFFF;
+    border-color: #3873b1;
+    border-bottom-color: #35577a;
+    background-color: #4A90D9;
+    background-image: linear-gradient(to bottom, #579be2, #4188d2);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025);
+    text-shadow: 0 1px white;
+    -gtk-icon-shadow: 0 1px white; }
+  infobar .close:active, infobar .close:checked,
+  searchbar .close:active,
+  searchbar .close:checked {
+    border-color: #3873b1;
+    background-color: #3a81cc;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none; }
+    infobar .close:active:backdrop, infobar .close:checked:backdrop,
+    searchbar .close:active:backdrop,
+    searchbar .close:checked:backdrop {
+      border-color: #c6c6c4;
+      background-color: #dddddb;
+      background-image: none;
+      box-shadow: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none; }
+  infobar .close:disabled,
+  searchbar .close:disabled {
+    border-color: transparent;
+    color: #81817e;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none; }
+    infobar .close:disabled:backdrop,
+    searchbar .close:disabled:backdrop {
+      border-color: transparent;
+      color: #babbbb;
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none; }
+  infobar .close:backdrop,
+  searchbar .close:backdrop {
+    border-color: transparent;
+    color: #8b8e8f;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none; }
 
 headerbar {
   min-height: 30px;
