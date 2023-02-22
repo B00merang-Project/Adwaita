@@ -37,7 +37,7 @@ textview > text {
   background-color: transparent; }
   textview > text:disabled {
     color: #8c8c8c;
-    background-color: #2d3033; }
+    background-color: #8c8c8c; }
   textview > text:selected:focus, textview > text:selected {
     color: #FFFFFF;
     background-color: #4A90D9; }
@@ -45,8 +45,10 @@ textview > text {
     color: #2B2E30;
     background-color: #4A90D9; }
   textview > text > selection {
+    color: #2B2E30;
     background-color: #4A90D9; }
     textview > text > selection:focus-within {
+      color: #FFFFFF;
       background-color: #4A90D9; }
 
 textview:drop(active) {
