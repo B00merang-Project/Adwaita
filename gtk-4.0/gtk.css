@@ -1694,28 +1694,28 @@ menu, .menu {
       menu menuitem accelerator:disabled, .menu menuitem accelerator:disabled {
         color: #81817e; }
 
-menubar, .menubar {
-  padding: 0;
+menubar {
+  padding: 0px;
   border: none;
-  box-shadow: inset 0 -1px #babab8;
+  color: #2E3436;
   background-color: #E8E8E7;
-  color: #2E3436; }
-  menubar:backdrop, .menubar:backdrop {
+  box-shadow: inset 0 -1px #babab8; }
+  menubar:backdrop {
     color: #8b8e8f;
-    box-shadow: inset 0 -1px #babab8;
-    background-color: #E8E8E7; }
-  menubar > menuitem, .menubar > menuitem {
+    background-color: #E8E8E7;
+    box-shadow: inset 0 -1px #babab8; }
+  menubar > item {
     min-height: 16px;
     padding: 4px 8px;
     border: none;
     color: #2E3436;
     background-color: transparent; }
-    menubar > menuitem:hover, .menubar > menuitem:hover {
+    menubar > item:selected {
       color: #4A90D9;
       box-shadow: inset 0 -3px #4A90D9; }
-    menubar > menuitem:disabled, .menubar > menuitem:disabled {
+    menubar > item:disabled {
       color: #81817e; }
-    menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
+    menubar > item:backdrop {
       color: #8b8e8f; }
 
 notebook {
