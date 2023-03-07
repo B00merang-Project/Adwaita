@@ -1959,13 +1959,12 @@ treeview ~ scrollbar.vertical {
   margin-top: -1px; }
 
 switch {
-  outline-offset: -4px;
   margin: 4px;
   font-size: smaller;
   font-weight: bold;
-  color: rgba(46, 52, 54, 0.9);
-  border: 1px solid #babab8;
   border-radius: 4px;
+  border: 1px solid #babab8;
+  color: rgba(46, 52, 54, 0.9);
   background-color: #d1d1cf; }
   switch:checked {
     color: rgba(255, 255, 255, 0.9);
@@ -1989,33 +1988,32 @@ switch {
     color: #8b8e8f;
     border-color: #c6c6c4;
     background-color: #d1d1cf; }
-  switch slider {
+  switch > slider {
+    margin: -1px;
     min-width: 46px;
     min-height: 27px;
-    margin: -1px;
     border-radius: 3px;
     color: #2E3436;
     border: 1px solid #9f9f9c;
     background-color: #F4F4F4;
     background-image: linear-gradient(to bottom, #f3f3f3, #E8E8E7);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 -1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.1); }
-  switch:checked slider {
+  switch:checked > slider {
     border: 1px solid #5d5d5c; }
-  switch:checked:backdrop slider {
-    border-color: #c6c6c4;
-    background-image: none;
-    box-shadow: none; }
-  switch:disabled slider {
+  switch:disabled > slider {
     border-color: #c6c6c4;
     background-color: #f3f3f3;
     background-image: none;
     box-shadow: none; }
-  switch:disabled:backdrop slider {
+  switch:disabled:backdrop > slider {
     border-color: #c6c6c4;
     background-color: #f1f1f0;
     background-image: none;
     box-shadow: none; }
-  switch:backdrop slider {
+  switch:backdrop > slider {
+    border-color: #c6c6c4;
+    background-image: none;
+    box-shadow: none;
     border-color: #c6c6c4;
     background-color: #E8E8E7;
     background-image: none;
