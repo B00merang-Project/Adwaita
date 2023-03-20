@@ -2030,6 +2030,10 @@ switch {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 -1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.1); }
   switch:checked > slider {
     border: 1px solid #121213; }
+  switch:checked:backdrop > slider {
+    border-color: #252728;
+    background-image: none;
+    box-shadow: none; }
   switch:disabled > slider {
     border-color: #252728;
     background-color: #2d3033;
@@ -2041,9 +2045,6 @@ switch {
     background-image: none;
     box-shadow: none; }
   switch:backdrop > slider {
-    border-color: #252728;
-    background-image: none;
-    box-shadow: none;
     border-color: #252728;
     background-color: #2B2E30;
     background-image: none;
