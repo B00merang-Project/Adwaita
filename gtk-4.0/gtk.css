@@ -745,19 +745,16 @@ entry {
   min-height: 32px;
   padding-left: 8px;
   padding-right: 8px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #babab8;
   border-radius: 3px;
+  border: 1px solid #babab8;
   color: #2E3436;
-  caret-color: currentColor;
-  background-color: #FFFFFF; }
-  entry:active, entry:focus {
+  background-color: #FFFFFF;
+  caret-color: currentColor; }
+  entry:focus-within {
     border-color: #4A90D9;
     box-shadow: inset 0 0 0 1px #4A90D9; }
-  entry:selected, entry:selected:focus, entry selection, entry selection:focus {
-    color: #FFFFFF;
-    background-color: #4A90D9; }
+    entry:focus-within > placeholder {
+      opacity: 0; }
   entry:disabled {
     color: #81817e;
     border-color: #c6c6c4;
@@ -770,26 +767,59 @@ entry {
     border-color: #c6c6c4;
     color: #2E3436;
     background-color: #FCFCFC; }
-  entry > image.left {
-    padding-right: 5px; }
-  entry > image.right {
-    padding-left: 5px; }
-  entry progress {
-    margin: -4px -4px;
-    border-width: 0 0 2px;
-    border-radius: 0;
-    border-style: solid;
-    border-color: #4A90D9;
-    background-color: transparent; }
   entry.flat, entry.flat:focus {
-    min-height: 0;
+    min-height: 0px;
     padding: 3px;
-    border-radius: 0;
+    border-radius: 0px;
     background-image: none;
     border-color: transparent; }
-  entry:drop(active):focus, entry:drop(active) {
+  entry > text > selection {
+    background-color: #4A90D9;
+    color: #E8E8E7; }
+    entry > text > selection:focus-within {
+      background-color: #4A90D9;
+      color: #FFFFFF; }
+  entry > image {
+    color: #585d5e; }
+    entry > image.left {
+      padding-right: 5px; }
+    entry > image.right {
+      padding-left: 5px; }
+    entry > image:hover {
+      color: #2E3436; }
+    entry > image:active {
+      color: #4A90D9; }
+  entry.password image.caps-lock-indicator {
+    color: #a2a4a4; }
+  entry > progress {
+    margin-bottom: 2px;
+    border-color: transparent; }
+  entry progress > trough > progress {
+    border-radius: 0;
+    border-width: 0 0 2px;
+    border-style: solid;
+    border-color: #4A90D9;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    margin-left: 2px;
+    margin-right: 2px; }
+  entry.search {
+    border-radius: 40px; }
+  entry:drop(active), entry:drop(active):focus-within {
     border-color: #2ec27e;
     box-shadow: inset 0 0 0 1px #2ec27e; }
+
+treeview entry:focus-within:dir(rtl), treeview entry:focus-within:dir(ltr) {
+  background-color: #FFFFFF;
+  transition-property: color, background; }
+
+treeview entry.flat, treeview entry {
+  border-radius: 0;
+  background-image: none;
+  background-color: #FFFFFF; }
+  treeview entry.flat:focus-within, treeview entry:focus-within {
+    border-color: #4A90D9; }
 
 editablelabel > stack > text > selection {
   color: transparent;
