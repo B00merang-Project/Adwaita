@@ -1340,21 +1340,6 @@ headerbar {
   color: #2E3436;
   background-color: #F4F4F4;
   box-shadow: inset 0 -2px rgba(0, 0, 0, 0.045); }
-  headerbar:backdrop {
-    border-bottom-color: #c6c6c4;
-    color: #8b8e8f;
-    background-color: #E8E8E7;
-    box-shadow: none; }
-  .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop {
-    border-radius: 0; }
-  separator:first-child + headerbar, separator:first-child + headerbar:backdrop, headerbar:first-child, headerbar:first-child:backdrop {
-    border-top-left-radius: 5px; }
-    .maximized separator:first-child + headerbar, .tiled separator:first-child + headerbar, .maximized separator:first-child + headerbar:backdrop, .tiled separator:first-child + headerbar:backdrop, .maximized headerbar:first-child, .tiled headerbar:first-child, .maximized headerbar:first-child:backdrop, .tiled headerbar:first-child:backdrop {
-      border-radius: 0; }
-  headerbar:last-child, headerbar:last-child:backdrop {
-    border-top-right-radius: 5px; }
-    .maximized headerbar:last-child, .tiled headerbar:last-child, .maximized headerbar:last-child:backdrop, .tiled headerbar:last-child:backdrop {
-      border-radius: 0; }
   headerbar .title {
     padding-left: 12px;
     padding-right: 12px;
@@ -1431,71 +1416,253 @@ headerbar {
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
+  headerbar:backdrop {
+    border-bottom-color: #c6c6c4;
+    color: #8b8e8f;
+    background-color: #E8E8E7;
+    box-shadow: none; }
+  .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop {
+    border-radius: 0; }
   headerbar.titlebar, .titlebar headerbar {
     border-radius: 5px 5px 0px 0px; }
-
-windowcontrols {
-  border-spacing: 6px; }
-  windowcontrols.start:not(.empty):dir(ltr), windowcontrols.end:not(.empty):dir(rtl) {
-    margin-right: 7px; }
-  windowcontrols.start:not(.empty):dir(rtl), windowcontrols.end:not(.empty):dir(ltr) {
-    margin-left: 7px; }
-  windowcontrols button.close, windowcontrols button.maximize, windowcontrols button.minimize {
-    border-color: transparent;
-    border-radius: 3px;
-    color: #2E3436;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none; }
-    windowcontrols button.close:hover, windowcontrols button.maximize:hover, windowcontrols button.minimize:hover {
-      color: #2E3436;
-      border-color: #babab8;
-      border-bottom-color: #8c8c89;
-      background-color: #E8E8E7;
-      background-image: linear-gradient(to bottom, #f9f9f9, #dbdbda);
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025);
-      text-shadow: 0 1px white;
-      -gtk-icon-shadow: 0 1px white; }
-    windowcontrols button.close:active, windowcontrols button.close:checked, windowcontrols button.maximize:active, windowcontrols button.maximize:checked, windowcontrols button.minimize:active, windowcontrols button.minimize:checked {
-      border-color: #babab8;
-      background-color: #d1d1cf;
-      background-image: none;
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none; }
-      windowcontrols button.close:active:backdrop, windowcontrols button.close:checked:backdrop, windowcontrols button.maximize:active:backdrop, windowcontrols button.maximize:checked:backdrop, windowcontrols button.minimize:active:backdrop, windowcontrols button.minimize:checked:backdrop {
-        border-color: #c6c6c4;
-        background-color: #dddddb;
-        background-image: none;
-        box-shadow: none;
-        text-shadow: none;
-        -gtk-icon-shadow: none; }
-    windowcontrols button.close:disabled, windowcontrols button.maximize:disabled, windowcontrols button.minimize:disabled {
+  separator:first-child + headerbar, separator:first-child + headerbar:backdrop, headerbar:first-child, headerbar:first-child:backdrop {
+    border-top-left-radius: 5px; }
+    .maximized separator:first-child + headerbar, .tiled separator:first-child + headerbar, .maximized separator:first-child + headerbar:backdrop, .tiled separator:first-child + headerbar:backdrop, .maximized headerbar:first-child, .tiled headerbar:first-child, .maximized headerbar:first-child:backdrop, .tiled headerbar:first-child:backdrop {
+      border-radius: 0; }
+  headerbar:last-child, headerbar:last-child:backdrop {
+    border-top-right-radius: 5px; }
+    .maximized headerbar:last-child, .tiled headerbar:last-child, .maximized headerbar:last-child:backdrop, .tiled headerbar:last-child:backdrop {
+      border-radius: 0; }
+  headerbar windowcontrols {
+    border-spacing: 6px; }
+    headerbar windowcontrols.start:not(.empty):dir(ltr), headerbar windowcontrols.end:not(.empty):dir(rtl) {
+      margin-right: 7px; }
+    headerbar windowcontrols.start:not(.empty):dir(rtl), headerbar windowcontrols.end:not(.empty):dir(ltr) {
+      margin-left: 7px; }
+    headerbar windowcontrols button.close {
       border-color: transparent;
-      color: #81817e;
+      border-radius: 3px;
+      color: #2E3436;
       background-color: transparent;
       background-image: none;
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
-      windowcontrols button.close:disabled:backdrop, windowcontrols button.maximize:disabled:backdrop, windowcontrols button.minimize:disabled:backdrop {
+      headerbar windowcontrols button.close:hover {
+        color: #2E3436;
+        border-color: #babab8;
+        border-bottom-color: #8c8c89;
+        background-color: #E8E8E7;
+        background-image: linear-gradient(to bottom, #f9f9f9, #dbdbda);
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025);
+        text-shadow: 0 1px white;
+        -gtk-icon-shadow: 0 1px white; }
+      headerbar windowcontrols button.close:active, headerbar windowcontrols button.close:checked {
+        border-color: #babab8;
+        background-color: #d1d1cf;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
+        headerbar windowcontrols button.close:active:backdrop, headerbar windowcontrols button.close:checked:backdrop {
+          border-color: #c6c6c4;
+          background-color: #dddddb;
+          background-image: none;
+          box-shadow: none;
+          text-shadow: none;
+          -gtk-icon-shadow: none; }
+      headerbar windowcontrols button.close:disabled {
         border-color: transparent;
-        color: #babbbb;
+        color: #81817e;
         background-color: transparent;
         background-image: none;
         box-shadow: none;
         text-shadow: none;
         -gtk-icon-shadow: none; }
-    windowcontrols button.close:backdrop, windowcontrols button.maximize:backdrop, windowcontrols button.minimize:backdrop {
+        headerbar windowcontrols button.close:disabled:backdrop {
+          border-color: transparent;
+          color: #babbbb;
+          background-color: transparent;
+          background-image: none;
+          box-shadow: none;
+          text-shadow: none;
+          -gtk-icon-shadow: none; }
+      headerbar windowcontrols button.close:backdrop {
+        border-color: transparent;
+        color: #8b8e8f;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
+    headerbar windowcontrols button.maximize {
       border-color: transparent;
-      color: #8b8e8f;
+      border-radius: 3px;
+      color: #2E3436;
       background-color: transparent;
       background-image: none;
       box-shadow: none;
       text-shadow: none;
       -gtk-icon-shadow: none; }
+      headerbar windowcontrols button.maximize:hover {
+        color: #2E3436;
+        border-color: #babab8;
+        border-bottom-color: #8c8c89;
+        background-color: #E8E8E7;
+        background-image: linear-gradient(to bottom, #f9f9f9, #dbdbda);
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025);
+        text-shadow: 0 1px white;
+        -gtk-icon-shadow: 0 1px white; }
+      headerbar windowcontrols button.maximize:active, headerbar windowcontrols button.maximize:checked {
+        border-color: #babab8;
+        background-color: #d1d1cf;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
+        headerbar windowcontrols button.maximize:active:backdrop, headerbar windowcontrols button.maximize:checked:backdrop {
+          border-color: #c6c6c4;
+          background-color: #dddddb;
+          background-image: none;
+          box-shadow: none;
+          text-shadow: none;
+          -gtk-icon-shadow: none; }
+      headerbar windowcontrols button.maximize:disabled {
+        border-color: transparent;
+        color: #81817e;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
+        headerbar windowcontrols button.maximize:disabled:backdrop {
+          border-color: transparent;
+          color: #babbbb;
+          background-color: transparent;
+          background-image: none;
+          box-shadow: none;
+          text-shadow: none;
+          -gtk-icon-shadow: none; }
+      headerbar windowcontrols button.maximize:backdrop {
+        border-color: transparent;
+        color: #8b8e8f;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
+    headerbar windowcontrols button.minimize {
+      border-color: transparent;
+      border-radius: 3px;
+      color: #2E3436;
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none; }
+      headerbar windowcontrols button.minimize:hover {
+        color: #2E3436;
+        border-color: #babab8;
+        border-bottom-color: #8c8c89;
+        background-color: #E8E8E7;
+        background-image: linear-gradient(to bottom, #f9f9f9, #dbdbda);
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025);
+        text-shadow: 0 1px white;
+        -gtk-icon-shadow: 0 1px white; }
+      headerbar windowcontrols button.minimize:active, headerbar windowcontrols button.minimize:checked {
+        border-color: #babab8;
+        background-color: #d1d1cf;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
+        headerbar windowcontrols button.minimize:active:backdrop, headerbar windowcontrols button.minimize:checked:backdrop {
+          border-color: #c6c6c4;
+          background-color: #dddddb;
+          background-image: none;
+          box-shadow: none;
+          text-shadow: none;
+          -gtk-icon-shadow: none; }
+      headerbar windowcontrols button.minimize:disabled {
+        border-color: transparent;
+        color: #81817e;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
+        headerbar windowcontrols button.minimize:disabled:backdrop {
+          border-color: transparent;
+          color: #babbbb;
+          background-color: transparent;
+          background-image: none;
+          box-shadow: none;
+          text-shadow: none;
+          -gtk-icon-shadow: none; }
+      headerbar windowcontrols button.minimize:backdrop {
+        border-color: transparent;
+        color: #8b8e8f;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
+    .maximized headerbar windowcontrols button.maximize {
+      border-color: transparent;
+      border-radius: 3px;
+      color: #2E3436;
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none; }
+      .maximized headerbar windowcontrols button.maximize:hover {
+        color: #2E3436;
+        border-color: #babab8;
+        border-bottom-color: #8c8c89;
+        background-color: #E8E8E7;
+        background-image: linear-gradient(to bottom, #f9f9f9, #dbdbda);
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 -1px rgba(0, 0, 0, 0.025);
+        text-shadow: 0 1px white;
+        -gtk-icon-shadow: 0 1px white; }
+      .maximized headerbar windowcontrols button.maximize:active, .maximized headerbar windowcontrols button.maximize:checked {
+        border-color: #babab8;
+        background-color: #d1d1cf;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
+        .maximized headerbar windowcontrols button.maximize:active:backdrop, .maximized headerbar windowcontrols button.maximize:checked:backdrop {
+          border-color: #c6c6c4;
+          background-color: #dddddb;
+          background-image: none;
+          box-shadow: none;
+          text-shadow: none;
+          -gtk-icon-shadow: none; }
+      .maximized headerbar windowcontrols button.maximize:disabled {
+        border-color: transparent;
+        color: #81817e;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
+        .maximized headerbar windowcontrols button.maximize:disabled:backdrop {
+          border-color: transparent;
+          color: #babbbb;
+          background-color: transparent;
+          background-image: none;
+          box-shadow: none;
+          text-shadow: none;
+          -gtk-icon-shadow: none; }
+      .maximized headerbar windowcontrols button.maximize:backdrop {
+        border-color: transparent;
+        color: #8b8e8f;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        -gtk-icon-shadow: none; }
 
 pathbar > button.text-button, pathbar > button.image-button, pathbar > button {
   padding-left: 4px;
@@ -1741,158 +1908,408 @@ menubar {
     menubar > item:backdrop {
       color: #8b8e8f; }
 
-notebook {
-  padding: 0; }
-  notebook > stack:not(:only-child) {
-    background-color: #FFFFFF; }
-    notebook > stack:not(:only-child):backdrop {
-      background-color: #FCFCFC; }
-  notebook > header {
-    padding: 1px;
-    border-color: #babab8;
+notebook.frame {
+  border: 1px solid #babab8; }
+
+notebook > stack:not(:only-child) {
+  background-color: #FFFFFF; }
+  notebook > stack:not(:only-child):backdrop {
+    background-color: #FCFCFC; }
+
+notebook > header {
+  padding: 1px;
+  border: none;
+  background-color: #d1d1cf; }
+  notebook > header:backdrop {
+    border-color: #c6c6c4;
+    background-color: #dddddb; }
+  notebook > header.top {
+    box-shadow: 0 1px #babab8;
+    margin-bottom: 1px; }
+  notebook > header.bottom {
+    box-shadow: 0 -1px #babab8; }
+  notebook > header.left {
+    box-shadow: 1px 0 #babab8;
+    margin-right: 1px; }
+  notebook > header.right {
+    box-shadow: -1px 0 #babab8; }
+  notebook > header.top > tabs,
+  notebook > header.bottom > tabs {
+    padding-left: 4px;
+    padding-right: 4px; }
+    notebook > header.top > tabs:not(:only-child),
+    notebook > header.bottom > tabs:not(:only-child) {
+      margin-left: 3px;
+      margin-right: 3px; }
+      notebook > header.top > tabs:not(:only-child):first-child,
+      notebook > header.bottom > tabs:not(:only-child):first-child {
+        margin-left: -1px; }
+      notebook > header.top > tabs:not(:only-child):last-child,
+      notebook > header.bottom > tabs:not(:only-child):last-child {
+        margin-right: -1px; }
+    notebook > header.top > tabs > tab,
+    notebook > header.bottom > tabs > tab {
+      margin-left: 4px;
+      margin-right: 4px; }
+      notebook > header.top > tabs > tab.reorderable-page,
+      notebook > header.bottom > tabs > tab.reorderable-page {
+        border-style: none solid; }
+  notebook > header.left > tabs,
+  notebook > header.right > tabs {
+    padding-top: 4px;
+    padding-bottom: 4px; }
+    notebook > header.left > tabs:not(:only-child),
+    notebook > header.right > tabs:not(:only-child) {
+      margin-top: 3px;
+      margin-bottom: 3px; }
+      notebook > header.left > tabs:not(:only-child):first-child,
+      notebook > header.right > tabs:not(:only-child):first-child {
+        margin-top: -1px; }
+      notebook > header.left > tabs:not(:only-child):last-child,
+      notebook > header.right > tabs:not(:only-child):last-child {
+        margin-bottom: -1px; }
+    notebook > header.left > tabs > tab,
+    notebook > header.right > tabs > tab {
+      margin-top: 4px;
+      margin-bottom: 4px; }
+      notebook > header.left > tabs > tab.reorderable-page,
+      notebook > header.right > tabs > tab.reorderable-page {
+        border-style: solid none; }
+  notebook > header.top tab {
+    padding-bottom: 4px; }
+  notebook > header.bottom tab {
+    padding-top: 4px; }
+  notebook > header.top > tabs > tab {
+    margin: -1px;
+    min-height: 30px;
+    min-width: 30px;
+    padding: 3px 12px;
+    font-weight: bold;
     border-width: 1px;
-    background-color: #d1d1cf; }
-    notebook > header:backdrop {
-      border-color: #c6c6c4;
-      background-color: #dddddb; }
-    notebook > header tabs {
-      margin: -1px; }
-    notebook > header.top {
-      border-bottom-style: solid; }
-      notebook > header.top > tabs {
-        margin-bottom: -2px; }
-        notebook > header.top > tabs > tab:hover {
-          box-shadow: inset 0 -3px #babab8; }
-        notebook > header.top > tabs > tab:backdrop {
-          box-shadow: none; }
-        notebook > header.top > tabs > tab:checked {
-          box-shadow: inset 0 -3px #4A90D9; }
-    notebook > header.bottom {
-      border-top-style: solid; }
-      notebook > header.bottom > tabs {
-        margin-top: -2px; }
-        notebook > header.bottom > tabs > tab:hover {
-          box-shadow: inset 0 3px #babab8; }
-        notebook > header.bottom > tabs > tab:backdrop {
-          box-shadow: none; }
-        notebook > header.bottom > tabs > tab:checked {
-          box-shadow: inset 0 3px #4A90D9; }
-    notebook > header.right {
-      border-left-style: solid; }
-      notebook > header.right > tabs {
-        margin-left: -2px; }
-        notebook > header.right > tabs > tab:hover {
-          box-shadow: inset 3px 0 #babab8; }
-        notebook > header.right > tabs > tab:backdrop {
-          box-shadow: none; }
-        notebook > header.right > tabs > tab:checked {
-          box-shadow: inset 3px 0 #4A90D9; }
-    notebook > header.left {
-      border-right-style: solid; }
-      notebook > header.left > tabs {
-        margin-right: -2px; }
-        notebook > header.left > tabs > tab:hover {
-          box-shadow: inset -3px 0 #babab8; }
-        notebook > header.left > tabs > tab:backdrop {
-          box-shadow: none; }
-        notebook > header.left > tabs > tab:checked {
-          box-shadow: inset -3px 0 #4A90D9; }
-    notebook > header tab {
-      min-height: 30px;
-      min-width: 30px;
-      padding: 3px 12px;
-      border-width: 1px;
-      border-color: transparent;
-      font-weight: bold;
-      color: #81817e;
-      background-color: transparent;
-      outline-offset: -6px; }
-      notebook > header tab:hover {
-        color: #575a5a; }
-        notebook > header tab.reorderable-page:hover {
-          border-color: rgba(186, 186, 184, 0.3);
-          background-color: rgba(232, 232, 231, 0.3); }
-      notebook > header tab:checked {
-        color: #2E3436; }
-        notebook > header tab:checked:backdrop {
-          color: #8b8e8f; }
-        notebook > header tab.reorderable-page:checked {
-          border-color: rgba(186, 186, 184, 0.7);
-          background-color: rgba(232, 232, 231, 0.5); }
-          notebook > header tab.reorderable-page:checked:hover {
-            background-color: rgba(232, 232, 231, 0.8); }
-          notebook > header tab.reorderable-page:checked:backdrop {
-            border-color: #c6c6c4;
-            background-color: #E8E8E7; }
-      notebook > header tab:backdrop {
-        color: #8b8e8f; }
-        notebook > header tab.reorderable-page:backdrop {
-          border-color: transparent;
-          background-color: transparent; }
-      notebook > header tab button.flat {
-        padding: 0;
-        margin-top: 4px;
-        margin-bottom: 4px;
-        min-width: 20px;
-        min-height: 20px; }
-    notebook > header.top tabs, notebook > header.bottom tabs {
-      padding-left: 4px;
-      padding-right: 4px; }
-      notebook > header.top tabs:not(:only-child), notebook > header.bottom tabs:not(:only-child) {
-        margin-left: 3px;
-        margin-right: 3px; }
-        notebook > header.top tabs:not(:only-child):first-child, notebook > header.bottom tabs:not(:only-child):first-child {
-          margin-left: -1px; }
-        notebook > header.top tabs:not(:only-child):last-child, notebook > header.bottom tabs:not(:only-child):last-child {
-          margin-right: -1px; }
-      notebook > header.top tabs tab, notebook > header.bottom tabs tab {
-        margin-left: 4px;
-        margin-right: 4px; }
-        notebook > header.top tabs tab.reorderable-page, notebook > header.bottom tabs tab.reorderable-page {
-          border-style: none solid; }
-    notebook > header.left tabs, notebook > header.right tabs {
-      padding-top: 4px;
-      padding-bottom: 4px; }
-      notebook > header.left tabs:not(:only-child), notebook > header.right tabs:not(:only-child) {
-        margin-top: 3px;
-        margin-bottom: 3px; }
-        notebook > header.left tabs:not(:only-child):first-child, notebook > header.right tabs:not(:only-child):first-child {
-          margin-top: -1px; }
-        notebook > header.left tabs:not(:only-child):last-child, notebook > header.right tabs:not(:only-child):last-child {
-          margin-bottom: -1px; }
-      notebook > header.left tabs tab, notebook > header.right tabs tab {
-        margin-top: 4px;
-        margin-bottom: 4px; }
-        notebook > header.left tabs tab.reorderable-page, notebook > header.right tabs tab.reorderable-page {
-          border-style: solid none; }
-    notebook > header.top tab {
-      padding-bottom: 4px; }
-    notebook > header.bottom tab {
-      padding-top: 4px; }
-    notebook > header.top > tabs > arrow.up, notebook > header.bottom > tabs > arrow.up {
-      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
-      notebook > header.top > tabs > arrow.up:last-child, notebook > header.bottom > tabs > arrow.up:last-child {
-        margin-left: 2px; }
-    notebook > header.top > tabs > arrow.down, notebook > header.bottom > tabs > arrow.down {
-      -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-      notebook > header.top > tabs > arrow.down:first-child, notebook > header.bottom > tabs > arrow.down:first-child {
-        margin-right: 2px; }
-    notebook > header.left > tabs > arrow.up, notebook > header.right > tabs > arrow.up {
-      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-      notebook > header.left > tabs > arrow.up:last-child, notebook > header.right > tabs > arrow.up:last-child {
-        margin-top: 2px; }
-    notebook > header.left > tabs > arrow.down, notebook > header.right > tabs > arrow.down {
-      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-      notebook > header.left > tabs > arrow.down:first-child, notebook > header.right > tabs > arrow.down:first-child {
-        margin-bottom: 2px; }
-    notebook > header > tabs > arrow {
+    border-color: transparent;
+    color: #81817e;
+    background-color: transparent;
+    box-shadow: none;
+    outline-offset: -6px; }
+    notebook > header.top > tabs > tab:hover {
+      color: #575a5a; }
+      notebook > header.top > tabs > tab.reorderable-page:hover {
+        border-color: rgba(186, 186, 184, 0.3);
+        background-color: rgba(232, 232, 231, 0.3); }
+    notebook > header.top > tabs > tab:checked {
       color: #2E3436; }
-      notebook > header > tabs > arrow:hover {
-        color: #363f42; }
-      notebook > header > tabs > arrow:active {
-        color: #25292b; }
-      notebook > header > tabs > arrow:disabled {
-        color: #81817e; }
+      notebook > header.top > tabs > tab:checked:backdrop {
+        color: #8b8e8f; }
+      notebook > header.top > tabs > tab.reorderable-page:checked {
+        border-color: rgba(186, 186, 184, 0.7);
+        background-color: rgba(232, 232, 231, 0.5); }
+        notebook > header.top > tabs > tab.reorderable-page:checked:hover {
+          background-color: rgba(232, 232, 231, 0.8); }
+        notebook > header.top > tabs > tab.reorderable-page:checked:backdrop {
+          border-color: #c6c6c4;
+          background-color: #E8E8E7; }
+    notebook > header.top > tabs > tab:backdrop {
+      color: #8b8e8f; }
+      notebook > header.top > tabs > tab.reorderable-page:backdrop {
+        border-color: transparent;
+        background-color: transparent; }
+    notebook > header.top > tabs > tab button.flat {
+      padding: 0px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      min-width: 20px;
+      min-height: 20px; }
+    notebook > header.top > tabs > tab:hover {
+      box-shadow: inset 0 -3px #babab8; }
+    notebook > header.top > tabs > tab:checked {
+      box-shadow: inset 0 -3px #4A90D9; }
+  notebook > header.bottom > tabs > tab {
+    margin: -1px;
+    min-height: 30px;
+    min-width: 30px;
+    padding: 3px 12px;
+    font-weight: bold;
+    border-width: 1px;
+    border-color: transparent;
+    color: #81817e;
+    background-color: transparent;
+    box-shadow: none;
+    outline-offset: -6px; }
+    notebook > header.bottom > tabs > tab:hover {
+      color: #575a5a; }
+      notebook > header.bottom > tabs > tab.reorderable-page:hover {
+        border-color: rgba(186, 186, 184, 0.3);
+        background-color: rgba(232, 232, 231, 0.3); }
+    notebook > header.bottom > tabs > tab:checked {
+      color: #2E3436; }
+      notebook > header.bottom > tabs > tab:checked:backdrop {
+        color: #8b8e8f; }
+      notebook > header.bottom > tabs > tab.reorderable-page:checked {
+        border-color: rgba(186, 186, 184, 0.7);
+        background-color: rgba(232, 232, 231, 0.5); }
+        notebook > header.bottom > tabs > tab.reorderable-page:checked:hover {
+          background-color: rgba(232, 232, 231, 0.8); }
+        notebook > header.bottom > tabs > tab.reorderable-page:checked:backdrop {
+          border-color: #c6c6c4;
+          background-color: #E8E8E7; }
+    notebook > header.bottom > tabs > tab:backdrop {
+      color: #8b8e8f; }
+      notebook > header.bottom > tabs > tab.reorderable-page:backdrop {
+        border-color: transparent;
+        background-color: transparent; }
+    notebook > header.bottom > tabs > tab button.flat {
+      padding: 0px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      min-width: 20px;
+      min-height: 20px; }
+    notebook > header.bottom > tabs > tab:hover {
+      box-shadow: inset 0 3px #babab8; }
+    notebook > header.bottom > tabs > tab:checked {
+      box-shadow: inset 0 3px #4A90D9; }
+  notebook > header.left > tabs > tab {
+    margin: -1px;
+    min-height: 30px;
+    min-width: 30px;
+    padding: 3px 12px;
+    font-weight: bold;
+    border-width: 1px;
+    border-color: transparent;
+    color: #81817e;
+    background-color: transparent;
+    box-shadow: none;
+    outline-offset: -6px; }
+    notebook > header.left > tabs > tab:hover {
+      color: #575a5a; }
+      notebook > header.left > tabs > tab.reorderable-page:hover {
+        border-color: rgba(186, 186, 184, 0.3);
+        background-color: rgba(232, 232, 231, 0.3); }
+    notebook > header.left > tabs > tab:checked {
+      color: #2E3436; }
+      notebook > header.left > tabs > tab:checked:backdrop {
+        color: #8b8e8f; }
+      notebook > header.left > tabs > tab.reorderable-page:checked {
+        border-color: rgba(186, 186, 184, 0.7);
+        background-color: rgba(232, 232, 231, 0.5); }
+        notebook > header.left > tabs > tab.reorderable-page:checked:hover {
+          background-color: rgba(232, 232, 231, 0.8); }
+        notebook > header.left > tabs > tab.reorderable-page:checked:backdrop {
+          border-color: #c6c6c4;
+          background-color: #E8E8E7; }
+    notebook > header.left > tabs > tab:backdrop {
+      color: #8b8e8f; }
+      notebook > header.left > tabs > tab.reorderable-page:backdrop {
+        border-color: transparent;
+        background-color: transparent; }
+    notebook > header.left > tabs > tab button.flat {
+      padding: 0px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      min-width: 20px;
+      min-height: 20px; }
+    notebook > header.left > tabs > tab:hover {
+      box-shadow: inset -3px 0 #babab8; }
+    notebook > header.left > tabs > tab:checked {
+      box-shadow: inset -3px 0 #4A90D9; }
+  notebook > header.right > tabs > tab {
+    margin: -1px;
+    min-height: 30px;
+    min-width: 30px;
+    padding: 3px 12px;
+    font-weight: bold;
+    border-width: 1px;
+    border-color: transparent;
+    color: #81817e;
+    background-color: transparent;
+    box-shadow: none;
+    outline-offset: -6px; }
+    notebook > header.right > tabs > tab:hover {
+      color: #575a5a; }
+      notebook > header.right > tabs > tab.reorderable-page:hover {
+        border-color: rgba(186, 186, 184, 0.3);
+        background-color: rgba(232, 232, 231, 0.3); }
+    notebook > header.right > tabs > tab:checked {
+      color: #2E3436; }
+      notebook > header.right > tabs > tab:checked:backdrop {
+        color: #8b8e8f; }
+      notebook > header.right > tabs > tab.reorderable-page:checked {
+        border-color: rgba(186, 186, 184, 0.7);
+        background-color: rgba(232, 232, 231, 0.5); }
+        notebook > header.right > tabs > tab.reorderable-page:checked:hover {
+          background-color: rgba(232, 232, 231, 0.8); }
+        notebook > header.right > tabs > tab.reorderable-page:checked:backdrop {
+          border-color: #c6c6c4;
+          background-color: #E8E8E7; }
+    notebook > header.right > tabs > tab:backdrop {
+      color: #8b8e8f; }
+      notebook > header.right > tabs > tab.reorderable-page:backdrop {
+        border-color: transparent;
+        background-color: transparent; }
+    notebook > header.right > tabs > tab button.flat {
+      padding: 0px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      min-width: 20px;
+      min-height: 20px; }
+    notebook > header.right > tabs > tab:hover {
+      box-shadow: inset 3px 0 #babab8; }
+    notebook > header.right > tabs > tab:checked {
+      box-shadow: inset 3px 0 #4A90D9; }
+  notebook > header.bottom > tabs > arrow, notebook > header.top > tabs > arrow {
+    margin-left: -5px;
+    margin-right: -5px;
+    padding-left: 4px;
+    padding-right: 4px; }
+    notebook > header.bottom > tabs > arrow.down, notebook > header.top > tabs > arrow.down {
+      -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+    notebook > header.bottom > tabs > arrow.up, notebook > header.top > tabs > arrow.up {
+      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+  notebook > header.right > tabs > arrow, notebook > header.left > tabs > arrow {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    padding-top: 4px;
+    padding-bottom: 4px; }
+    notebook > header.right > tabs > arrow.down, notebook > header.left > tabs > arrow.down {
+      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+    notebook > header.right > tabs > arrow.up, notebook > header.left > tabs > arrow.up {
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+  notebook > header.top > tabs > arrow {
+    border-top-style: none; }
+  notebook > header.bottom > tabs > arrow {
+    border-bottom-style: none; }
+  notebook > header.left > tabs > arrow {
+    border-left-style: none; }
+  notebook > header.right > tabs > arrow {
+    border-right-style: none; }
+
+tabbar .box {
+  padding: 1px;
+  border: none;
+  background-color: #d1d1cf; }
+  tabbar .box:backdrop {
+    border-color: #c6c6c4;
+    background-color: #dddddb; }
+  tabbar .box.top {
+    box-shadow: 0 1px #babab8;
+    margin-bottom: 1px; }
+  tabbar .box.bottom {
+    box-shadow: 0 -1px #babab8; }
+  tabbar .box.left {
+    box-shadow: 1px 0 #babab8;
+    margin-right: 1px; }
+  tabbar .box.right {
+    box-shadow: -1px 0 #babab8; }
+  notebook > header.top > tabs,
+  notebook > header.bottom > tabs {
+    padding-left: 4px;
+    padding-right: 4px; }
+    notebook > header.top > tabs:not(:only-child),
+    notebook > header.bottom > tabs:not(:only-child) {
+      margin-left: 3px;
+      margin-right: 3px; }
+      notebook > header.top > tabs:not(:only-child):first-child,
+      notebook > header.bottom > tabs:not(:only-child):first-child {
+        margin-left: -1px; }
+      notebook > header.top > tabs:not(:only-child):last-child,
+      notebook > header.bottom > tabs:not(:only-child):last-child {
+        margin-right: -1px; }
+    notebook > header.top > tabs > tab,
+    notebook > header.bottom > tabs > tab {
+      margin-left: 4px;
+      margin-right: 4px; }
+      notebook > header.top > tabs > tab.reorderable-page,
+      notebook > header.bottom > tabs > tab.reorderable-page {
+        border-style: none solid; }
+  notebook > header.left > tabs,
+  notebook > header.right > tabs {
+    padding-top: 4px;
+    padding-bottom: 4px; }
+    notebook > header.left > tabs:not(:only-child),
+    notebook > header.right > tabs:not(:only-child) {
+      margin-top: 3px;
+      margin-bottom: 3px; }
+      notebook > header.left > tabs:not(:only-child):first-child,
+      notebook > header.right > tabs:not(:only-child):first-child {
+        margin-top: -1px; }
+      notebook > header.left > tabs:not(:only-child):last-child,
+      notebook > header.right > tabs:not(:only-child):last-child {
+        margin-bottom: -1px; }
+    notebook > header.left > tabs > tab,
+    notebook > header.right > tabs > tab {
+      margin-top: 4px;
+      margin-bottom: 4px; }
+      notebook > header.left > tabs > tab.reorderable-page,
+      notebook > header.right > tabs > tab.reorderable-page {
+        border-style: solid none; }
+  notebook > header.top tab {
+    padding-bottom: 4px; }
+  notebook > header.bottom tab {
+    padding-top: 4px; }
+
+tabbar tabbox {
+  padding-bottom: 6px;
+  padding-top: 6px;
+  min-height: 34px; }
+  tabbar tabbox > separator {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    transition: opacity 150ms ease-in-out; }
+    tabbar tabbox > separator.hidden {
+      opacity: 0; }
+  tabbar tabbox > revealer > indicator {
+    min-width: 2px;
+    border-radius: 0px;
+    margin: 3px 6px; }
+
+tabbar tab {
+  margin: -1px;
+  min-height: 30px;
+  min-width: 30px;
+  padding: 3px 12px;
+  font-weight: bold;
+  border-width: 1px;
+  border-color: transparent;
+  color: #81817e;
+  background-color: transparent;
+  box-shadow: none;
+  outline-offset: -6px; }
+  tabbar tab:hover {
+    color: #575a5a; }
+    tabbar tab.reorderable-page:hover {
+      border-color: rgba(186, 186, 184, 0.3);
+      background-color: rgba(232, 232, 231, 0.3); }
+  tabbar tab:checked {
+    color: #2E3436; }
+    tabbar tab:checked:backdrop {
+      color: #8b8e8f; }
+    tabbar tab.reorderable-page:checked {
+      border-color: rgba(186, 186, 184, 0.7);
+      background-color: rgba(232, 232, 231, 0.5); }
+      tabbar tab.reorderable-page:checked:hover {
+        background-color: rgba(232, 232, 231, 0.8); }
+      tabbar tab.reorderable-page:checked:backdrop {
+        border-color: #c6c6c4;
+        background-color: #E8E8E7; }
+  tabbar tab:backdrop {
+    color: #8b8e8f; }
+    tabbar tab.reorderable-page:backdrop {
+      border-color: transparent;
+      background-color: transparent; }
+  tabbar tab button.flat {
+    padding: 0px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    min-width: 20px;
+    min-height: 20px; }
+  tabbar tab:hover {
+    box-shadow: inset 0 -3px #babab8; }
+  tabbar tab:selected {
+    box-shadow: inset 0 -3px #4A90D9; }
+  tabbar tab:backdrop {
+    box-shadow: none; }
+
+tabbar tabbox.single-tab tab, tabbar tabbox.single-tab tab:hover, tabbar tabbox.single-tab tab:active {
+  background: none; }
 
 scrollbar {
   background-color: #E8E8E7;
