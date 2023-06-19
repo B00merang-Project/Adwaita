@@ -1,4 +1,4 @@
-[![built-with-azurra-framework](https://github.com/B00merang-Project/Azurra_framework/raw/assets/azurra_framework_smaller.png)](https://github.com/B00merang-Project/Azurra_framework)
+[![built-with-azurra-framework](https://github.com/B00merang-Project/B00merang-Project.github.io/blob/master/resources/badges/azurra/badge_smaller.png)](https://github.com/B00merang-Project/Azurra_framework)
 
 # Adwaita
 This theme reproduces the appearance of GNOME's default theme, Adwaita, before the revamp initiated in 2019. We felt that integrating Adwaita into the framework added some new possibilities and brought some new methods of drawing widgets.
