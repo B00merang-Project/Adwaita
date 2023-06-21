@@ -638,8 +638,8 @@ editablelabel > stack > text > selection {
 
 button {
   padding: 5px 9px;
-  min-height: 24px;
   min-width: 16px;
+  min-height: 24px;
   border-radius: 3px;
   border: 1px solid #babab8;
   border-bottom-color: #a8a8a5;
@@ -806,10 +806,6 @@ button.flat {
     -gtk-icon-shadow: none; }
 
 button.destructive-action {
-  padding: 5px 9px;
-  min-height: 24px;
-  min-width: 16px;
-  border-radius: 3px;
   border: 1px solid #931010;
   border-bottom-color: #7e1515;
   color: #FFFFFF;
@@ -851,10 +847,6 @@ button.destructive-action {
     -gtk-icon-shadow: none; }
 
 button.suggested-action {
-  padding: 5px 9px;
-  min-height: 24px;
-  min-width: 16px;
-  border-radius: 3px;
   border: 1px solid #3873b1;
   border-bottom-color: #38689a;
   color: #FFFFFF;
@@ -1051,10 +1043,6 @@ infobar.info > revealer > box, infobar.question > revealer > box, infobar.warnin
     background-color: #4A90D9; }
 
 infobar button {
-  padding: 5px 9px;
-  min-height: 24px;
-  min-width: 16px;
-  border-radius: 3px;
   border: 1px solid #3873b1;
   border-bottom-color: #38689a;
   color: #FFFFFF;
@@ -1111,10 +1099,6 @@ headerbar {
     padding-right: 12px;
     color: alpha(currentColor, 0.7); }
   headerbar button {
-    padding: 5px 9px;
-    min-height: 24px;
-    min-width: 16px;
-    border-radius: 3px;
     border: 1px solid #babab8;
     border-bottom-color: #a8a8a5;
     color: #2E3436;
